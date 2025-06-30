@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./App.module.css";
 import styled from "styled-components";
+import { Outlet } from "react-router-dom";
 
 const Smt = styled.p`
   color: red;
@@ -11,34 +12,34 @@ const Smt = styled.p`
 `;
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isClicked, setClick] = useState(false);
 
   return (
     <>
-      <div>
-        <a className={styles.a} href="https://vite.dev" target="_blank">
-          "Vite logo"
-        </a>
-        <a className={styles.a} href="https://react.dev" target="_blank">
-          {" "}
-          "React logo"
-        </a>
-      </div>
-      <h1 className={styles.h1}>Vite + React</h1>
-      <div className={styles.card}>
-        <button
-          className={styles.button}
-          onClick={() => setCount((count) => count + 1)}
-        >
-          count is {count}
+      <header>
+        <div>
+          <img src="./Shopping-Cart/shoppingCart.svg" alt="" />
+          <p>Stan's mall</p>
+        </div>
+        <button className={styles.btn} onClick={() => setClick((e) => !e)}>
+          <img src="./Shopping-Cart/acCircle.svg" alt="" />
+          <p>Cool user</p>
+          <ul className={!isClicked ? styles.ulInvisible : styles.ulVisible}>
+            <a href="">
+              <li>Account</li>
+            </a>
+            <a href="">
+              <li>Cart</li>
+            </a>
+            <a href="">
+              <li>FAQ</li>
+            </a>
+          </ul>
         </button>
-        <Smt>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </ Smt>
-      </div>
-      <p className={styles.readTheDocs}>
-        Click on the Vite and React logos to learn more
-      </p>
+      </header>
+      <nav>nav</nav>
+      <Outlet />
+      <footer>footer</footer>
     </>
   );
 }

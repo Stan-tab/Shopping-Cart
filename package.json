@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://stan-tab.github.io/repository-name",
+  "homepage": "https://stan-tab.github.io/Shopping-Cart",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,6 +13,7 @@
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.3",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
