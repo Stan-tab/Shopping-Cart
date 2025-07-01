@@ -18,11 +18,11 @@
   border-radius: 5px;
   padding: 7px 7px;
   margin: 0;
-  & >p {
+  & > p {
     font-size: 1.3rem;
     margin: 0;
   }
-  & >img {
+  & > img {
     width: 2.5rem;
     height: auto;
   }
@@ -33,11 +33,11 @@
 .logo {
   composes: heads-el;
 
-  & >p {
+  & > p {
     font-size: 1.7rem;
   }
 
-  & >img {
+  & > img {
     width: 3rem;
     height: auto;
   }
@@ -70,7 +70,7 @@
     background-color: rgba(250, 235, 215, 0.329);
     outline: rgb(59, 73, 59) 1px solid;
   }
-  & >a {
+  & > a {
     color: var(--color);
     text-decoration: none;
   }
@@ -80,4 +80,21 @@
   composes: ulInvisible;
   transform: scale(1, 1) translate(-50%, 0);
   opacity: 1;
+}
+
+.shop-cart {
+  transform: rotateY(180deg);
+  width: 2.3rem;
+  height: auto;
+}
+
+.shop-cart-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 100%;
+  padding: 7px;
+}
+.shop-cart-container:hover {
+  outline: rgb(59, 73, 59) 1px solid;
 }

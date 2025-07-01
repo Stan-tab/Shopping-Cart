@@ -1,15 +1,41 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./App.module.css";
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import styled from "styled-components";
+
+const Footer = styled.footer`
+  text-align: center;
+  padding-top: 10px;
+`;
 
 function App() {
+  const [shopData, setShopData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loader, setLoader] = useState(false);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((response) => {
+        if (response.status >= 400) {
+          throw new Error(`Error ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => setShopData(data))
+      .catch((e) => setError(e))
+      .finally(() => setLoader(true));
+  }, []);
+
   return (
     <>
       <Header />
-      <nav>nav</nav>
-      <Outlet />
-      <footer>footer</footer>
+      <Navbar />
+      <Outlet context={{ data: shopData, error, loader }} />
+      <Footer>
+        <a href="https://github.com/Stan-tab">My github</a>
+      </Footer>
     </>
   );
 }

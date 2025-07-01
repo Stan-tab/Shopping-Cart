@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import App from "./App";
 import Error from "./rootes/Error";
+import Market from "./rootes/Market";
 
 const router = createBrowserRouter([
   {
@@ -10,9 +11,7 @@ const router = createBrowserRouter([
     children: [
       {
         errorElement: <Error />,
-        children: [
-            
-        ]
+        children: [{ index: true, element: <Market /> }],
       },
     ],
   },
