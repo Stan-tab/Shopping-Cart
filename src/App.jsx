@@ -18,12 +18,12 @@ function App() {
     <>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <img src="./Shopping-Cart/shoppingCart.svg" alt="" />
+          <img src="./shoppingCart.svg" alt="" />
           <p>Stan's mall</p>
         </div>
         <div style={{position: "relative"}}>
           <button className={styles.btn} onClick={() => setClick((e) => !e)}>
-            <img src="./Shopping-Cart/acCircle.svg" alt="" />
+            <img src="./acCircle.svg" alt="" />
             <p>Cool user</p>
           </button>
           <ul className={!isClicked ? styles.ulInvisible : styles.ulVisible}>

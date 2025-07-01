@@ -29,3 +29,29 @@ git push origin `git subtree split --prefix dist gh-pages`:gh-pages --force
 ```
 
 [Usefull links](https://clontz.org/blog/2014/05/08/git-subtree-push-for-deployment/)
+
+---
+
+## **_To stop tracking some files_**
+
+```bash
+git update-index --skip-worktree vite.config.js
+```
+
+also try:
+
+```bash
+git update-index --assume-unchanged vite.config.js
+```
+
+## **_for traching them_**
+
+```bash
+git update-index --no-skip-worktree vite.config.js
+```
+
+also try:
+
+```bash
+git update-index --no-assume-unchanged vite.config.js
+```
