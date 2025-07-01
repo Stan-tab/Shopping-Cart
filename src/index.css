@@ -5,6 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
+  --color: rgba(255, 255, 255, 0.87):
   background-color: #242424;
 
   font-synthesis: none;
@@ -15,8 +16,6 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -25,11 +24,12 @@ body {
   :root {
     color: #213547;
     background-color: #ffffff;
+    --color: #213547:
   }
 }
 
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   padding: 1.5rem;
   display: grid;  
 }

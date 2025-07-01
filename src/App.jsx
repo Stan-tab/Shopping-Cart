@@ -16,26 +16,28 @@ function App() {
 
   return (
     <>
-      <header>
-        <div>
+      <header className={styles.header}>
+        <div className={styles.logo}>
           <img src="./Shopping-Cart/shoppingCart.svg" alt="" />
           <p>Stan's mall</p>
         </div>
-        <button className={styles.btn} onClick={() => setClick((e) => !e)}>
-          <img src="./Shopping-Cart/acCircle.svg" alt="" />
-          <p>Cool user</p>
+        <div style={{position: "relative"}}>
+          <button className={styles.btn} onClick={() => setClick((e) => !e)}>
+            <img src="./Shopping-Cart/acCircle.svg" alt="" />
+            <p>Cool user</p>
+          </button>
           <ul className={!isClicked ? styles.ulInvisible : styles.ulVisible}>
-            <a href="">
+            <a href="#">
               <li>Account</li>
             </a>
-            <a href="">
+            <a href="#">
               <li>Cart</li>
             </a>
-            <a href="">
+            <a href="#">
               <li>FAQ</li>
             </a>
           </ul>
-        </button>
+        </div>
       </header>
       <nav>nav</nav>
       <Outlet />
