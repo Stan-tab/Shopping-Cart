@@ -1,10 +1,15 @@
+import style from "./Products.module.css";
+import { Link } from "react-router-dom";
+
 export default function Products({ data }) {
   return (
-    <div>
+    <div className={style.box}>
       {data.map((element) => {
         return (
           <div key={element.id}>
-            <img src={element.image} alt={element.title} />
+            <Link to={`${element.id}`}>
+              <img src={element.image} alt={element.title} />
+            </Link>
             <p>{element.title}</p>
             <div>
               <p>{element.category}</p>
