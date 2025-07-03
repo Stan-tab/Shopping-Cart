@@ -1,5 +1,44 @@
 .box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+
+.container {
+  width: clamp(250px, 20vw, 500px);
+  padding: 15px;
+  p {
+    margin: 0;
+  }
+}
+
+.img {
+  will-change: auto;
+  width: clamp(250px, 20vw, 500px);
+  border-radius: 10px;
+  transition: transform ease-in-out 1s;
+}
+
+.img:hover {
+  transform: rotateY(-20deg) rotateX(-10deg) rotateZ(-3deg);
+}
+
+.add-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 5px;
+  color: rgb(151, 138, 138);
+}
+
+.to-cart {
+  align-items: end;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+.img-container {
+  position: relative;
 }

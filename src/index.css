@@ -4,14 +4,16 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  --color: rgba(255, 255, 255, 0.87):
-  background-color: #242424;
+  color: var(--color);
+  background-color: var(--backgroundColor);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color: rgba(255, 255, 255, 0.87);
+  --backgroundColor: #242424;
 }
 
 body {
@@ -22,8 +24,7 @@ body {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --backgroundColor: #ffffff;
     --color: #213547:
   }
 }
@@ -32,5 +33,5 @@ body {
   /* max-width: 1280px; */
   padding: 1.5rem;
   display: grid;
-  grid-template-columns: minmax(270px, 500px) 2fr;
+  grid-template-columns: minmax(230px, 350px) 2fr;
 }

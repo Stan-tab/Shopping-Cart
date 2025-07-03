@@ -6,12 +6,21 @@ export default function Products({ data }) {
     <div className={style.box}>
       {data.map((element) => {
         return (
-          <div key={element.id}>
-            <Link to={`${element.id}`}>
-              <img src={element.image} alt={element.title} />
-            </Link>
+          <div key={element.id} className={style.container}>
+            <div className={style.imgContainer}>
+              <Link to={`${element.id}`}>
+                <img
+                  src={element.image}
+                  alt={element.title}
+                  className={style.img}
+                />
+              </Link>
+              <button className={style.toCart}>
+                <img src="./addShopCart.svg" alt="add to the cart" />
+              </button>
+            </div>
             <p>{element.title}</p>
-            <div>
+            <div className={style.addInfo}>
               <p>{element.category}</p>
               <p>{element.price}</p>
             </div>
