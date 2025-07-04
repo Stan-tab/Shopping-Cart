@@ -50,7 +50,9 @@
 }
 
 .ulInvisible {
-  width: 70%;
+  z-index: 1;
+  background-color: color-mix(in srgb, var(--backgroundColor) 45%, var(--backgroundColor) 40%);
+  width: 100%;
   list-style-type: none;
   padding: 0;
   position: absolute;
@@ -61,17 +63,19 @@
   transform-origin: top;
   transform: scale(1, 0) translate(-50%, 0);
   will-change: auto;
+  border-radius: 10px;
   & li {
     padding: 7px;
     margin: 0;
     margin-top: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
   }
   & li:hover {
     background-color: rgba(250, 235, 215, 0.329);
     outline: rgb(59, 73, 59) 1px solid;
   }
   & > a {
+    border-radius: 10px;
     color: var(--color);
     text-decoration: none;
   }

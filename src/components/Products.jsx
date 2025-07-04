@@ -8,7 +8,7 @@ export default function Products({ data }) {
         return (
           <div key={element.id} className={style.container}>
             <div className={style.imgContainer}>
-              <Link to={`${element.id}`}>
+              <Link to={`product/${element.id}`}>
                 <img
                   src={element.image}
                   alt={element.title}
