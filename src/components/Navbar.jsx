@@ -1,24 +1,33 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useSubmit } from "react-router-dom";
+import style from "./Navbar.module.css";
 
 export default function Navbar(props) {
+  const submit = useSubmit();
   return (
     <nav>
-      <input type="text" defaultValue={props.q} onChange={props.change} />
-      <div>
+      <input
+        className={style.input}
+        type="text"
+        defaultValue={props.q}
+        onChange={(e) => {
+          submit(`q=${e.currentTarget.value}`);
+        }}
+      />
+      <div className={style.container}>
         <h3>Categories</h3>
-        <ul>
-          <li>
-            <NavLink>Men's clothing</NavLink>
-          </li>
-          <li>
-            <NavLink>Women's clothing</NavLink>
-          </li>
-          <li>
-            <NavLink>Electronics</NavLink>
-          </li>
-          <li>
-            <NavLink>Jewelery</NavLink>
-          </li>
+        <ul className={style.ul}>
+          <NavLink>
+            <li>Men's clothing</li>
+          </NavLink>
+          <NavLink>
+            <li>Women's clothing</li>
+          </NavLink>
+          <NavLink>
+            <li>Electronics</li>
+          </NavLink>
+          <NavLink>
+            <li>Jewelery</li>
+          </NavLink>
         </ul>
       </div>
     </nav>

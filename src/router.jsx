@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import App from "./App";
+import { loader as appLoader } from "./App";
 import Error from "./rootes/Error";
 import Market from "./rootes/Market";
 import Card from "./rootes/Card";
@@ -9,6 +10,7 @@ const router = createBrowserRouter([
   {
     path: "/Shopping-Cart",
     element: <App />,
+    loader: appLoader,
     errorElement: <Error />,
     children: [
       {
