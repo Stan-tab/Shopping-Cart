@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./App.module.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLoaderData } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import styled from "styled-components";
@@ -14,6 +14,7 @@ const Footer = styled.footer`
 
 function App() {
   const [shopData, setShopData] = useState(null);
+  // const {data, q} = useLoaderData(); todo
   const [error, setError] = useState(null);
   const [loader, setLoader] = useState(false);
 

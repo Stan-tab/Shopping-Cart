@@ -29,8 +29,8 @@ export default function Card() {
       <button onClick={() => navidate(-1)}>
         <img src={arrowImg} alt="back" />
       </button>
-      <div>
-        <img src={prod.image} alt={prod.title} />
+      <div className={style.card}>
+        <img src={prod.image} alt={prod.title} className={style.mainImg} />
         <button>
           <img src={addShopCart} alt="" />
         </button>

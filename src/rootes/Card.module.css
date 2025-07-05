@@ -1,0 +1,16 @@
+.content {
+    position: relative;
+}
+
+.card {
+    max-width: min-content;
+    margin: 0 auto;
+    &> button {
+        display: block;
+        width: 100%;
+    }
+}
+
+.mainImg {
+    width: clamp(300px, 35vw, 850px)
+}

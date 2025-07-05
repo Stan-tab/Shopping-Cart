@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <nav>
-      <input type="text" />
+      <input type="text" defaultValue={props.q} onChange={props.change} />
       <div>
         <h3>Categories</h3>
         <ul>
