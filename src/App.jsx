@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import styled from "styled-components";
-import shopData from "../data.json"; //remove
+// import shopData from "../data.json"; //remove
 
 const Footer = styled.footer`
   text-align: center;

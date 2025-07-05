@@ -1,5 +1,6 @@
 import style from "./Products.module.css";
 import { Link } from "react-router-dom";
+import addShopingCart from "../assets/addShopCart.svg"
 
 export default function Products({ data }) {
   return (
@@ -16,7 +17,7 @@ export default function Products({ data }) {
                 />
               </Link>
               <button className={style.toCart}>
-                <img src="./addShopCart.svg" alt="add to the cart" />
+                <img src={addShopingCart} alt="add to the cart" />
               </button>
             </div>
             <p>{element.title}</p>
