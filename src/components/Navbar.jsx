@@ -1,14 +1,14 @@
 import { NavLink, useSubmit } from "react-router-dom";
 import style from "./Navbar.module.css";
 
-export default function Navbar(props) {
+export default function Navbar() {
   const submit = useSubmit();
   return (
     <nav>
       <input
         className={style.input}
         type="text"
-        defaultValue={props.q}
+        placeholder="search e.g backpack"
         onChange={(e) => {
           submit(`q=${e.currentTarget.value}`);
         }}
@@ -16,16 +16,16 @@ export default function Navbar(props) {
       <div className={style.container}>
         <h3>Categories</h3>
         <ul className={style.ul}>
-          <NavLink>
+          <NavLink to={"Men's clothing"}>
             <li>Men's clothing</li>
           </NavLink>
-          <NavLink>
+          <NavLink to={"Women's clothing"}>
             <li>Women's clothing</li>
           </NavLink>
-          <NavLink>
+          <NavLink to={"Electronics"}>
             <li>Electronics</li>
           </NavLink>
-          <NavLink>
+          <NavLink to={"Jewelery"}>
             <li>Jewelery</li>
           </NavLink>
         </ul>

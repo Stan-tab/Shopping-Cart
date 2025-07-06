@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import styled from "styled-components";
 // import shopData from "../data.json"; //remove
 
-export async function loader({ request }) {
+export async function loader({request}) {
   const url = new URL(request.url);
   const q = url.searchParams.get("q");
   return q;

@@ -3,6 +3,7 @@ import App from "./App";
 import { loader as appLoader } from "./App";
 import Error from "./rootes/Error";
 import Market from "./rootes/Market";
+import { loader as marketLoader } from "./rootes/Market";
 import Card from "./rootes/Card";
 import { loader as cardLoad } from "./rootes/Card";
 
@@ -17,7 +18,11 @@ const router = createBrowserRouter([
         errorElement: <Error />,
         children: [
           { index: true, element: <Market /> },
-          { path: "product/:id", element: <Card />, loader: cardLoad},
+          { path: "Jewelery", element: <Market />, loader: marketLoader },
+          { path: "Electronics", element: <Market />, loader: marketLoader },
+          { path: "Women's clothing", element: <Market />, loader: marketLoader },
+          { path: "Men's clothing", element: <Market />, loader: marketLoader },
+          { path: "product/:id", element: <Card />, loader: cardLoad },
         ],
       },
     ],
