@@ -4,7 +4,6 @@ import { Outlet, useLoaderData } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import styled from "styled-components";
-// import shopData from "../data.json"; //remove
 
 export async function loader({request}) {
   const url = new URL(request.url);

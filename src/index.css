@@ -29,7 +29,7 @@ body {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   nav {
     transition: all 1s ease-in-out;
     position: fixed;
@@ -37,17 +37,17 @@ body {
     background-color: var(--backgroundColor);
     height: 150vh;
     left: -100%;
+    top: -25px;
+    padding-left: 50px;
+    padding-top: 100px;
+    padding-right: 5px;
   }
   .show {
-    transform: translate(225%, 10%);
-  }
-  nav + div {
-    width: 100vw;
+    transform: translate(140%);
   }
 }
 
 #root {
-  /* max-width: 1280px; */
   padding: 1.5rem;
   display: grid;
   grid-template-columns: minmax(230px, 350px) 2fr;

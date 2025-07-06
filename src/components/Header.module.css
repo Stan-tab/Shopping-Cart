@@ -51,7 +51,11 @@
 
 .ulInvisible {
   z-index: 1;
-  background-color: color-mix(in srgb, var(--backgroundColor) 45%, var(--backgroundColor) 40%);
+  background-color: color-mix(
+    in srgb,
+    var(--backgroundColor) 45%,
+    var(--backgroundColor) 40%
+  );
   width: 100%;
   list-style-type: none;
   padding: 0;
@@ -102,4 +106,25 @@
 }
 .shop-cart-container:hover {
   outline: rgb(59, 73, 59) 1px solid;
+}
+
+@media (max-width: 380px) {
+  .header {
+    z-index: 2;
+    font-weight: bolder;
+    font-size: 1rem;
+    padding: 0;
+    p {
+      font-size: 1rem;
+    }
+    img {
+      width: 2rem;
+    }
+  }
+  .shop-cart-container {
+    margin: 0;
+  }
+  .heads-el {
+    gap: 10px;
+  }
 }
