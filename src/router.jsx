@@ -6,6 +6,7 @@ import Market from "./rootes/Market";
 import { loader as marketLoader } from "./rootes/Market";
 import Card from "./rootes/Card";
 import { loader as cardLoad } from "./rootes/Card";
+import Cart from "./rootes/Cart";
 
 const router = createBrowserRouter([
   {
@@ -20,9 +21,14 @@ const router = createBrowserRouter([
           { index: true, element: <Market /> },
           { path: "Jewelery", element: <Market />, loader: marketLoader },
           { path: "Electronics", element: <Market />, loader: marketLoader },
-          { path: "Women's clothing", element: <Market />, loader: marketLoader },
+          {
+            path: "Women's clothing",
+            element: <Market />,
+            loader: marketLoader,
+          },
           { path: "Men's clothing", element: <Market />, loader: marketLoader },
           { path: "product/:id", element: <Card />, loader: cardLoad },
+          { path: "cart", element: <Cart /> },
         ],
       },
     ],

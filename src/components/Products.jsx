@@ -1,6 +1,6 @@
 import style from "./Products.module.css";
 import { Link } from "react-router-dom";
-import addShopingCart from "../assets/addShopCart.svg"
+import addShopingCart from "../assets/addShopCart.svg";
 
 export default function Products({ data }) {
   return (
@@ -16,7 +16,17 @@ export default function Products({ data }) {
                   className={style.img}
                 />
               </Link>
-              <button className={style.toCart}>
+              <button
+                style={{ backgroundColor: element.inBucket ? "green" : "" }}
+                className={style.toCart}
+                onClick={(e) => {
+                  element.inBucket = !element.inBucket;
+                  const button = e.currentTarget;
+                  button.style.backgroundColor = element.inBucket
+                    ? "green"
+                    : "#6B6B6B";
+                }}
+              >
                 <img src={addShopingCart} alt="add to the cart" />
               </button>
             </div>

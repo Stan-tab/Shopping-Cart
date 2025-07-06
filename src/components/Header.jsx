@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import acCircle from "../assets/acCircle.svg";
 import shoppingCart from "../assets/shoppingCart.svg";
@@ -8,17 +9,27 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <div
+        className={styles.logo}
+        onClick={() => {
+          const nav = document.querySelector("nav");
+          [...nav.classList].includes("show")
+            ? nav.classList.remove("show")
+            : nav.classList.add("show");
+        }}
+      >
         <img src={shoppingCart} alt="" />
         <p>Stan's mall</p>
       </div>
       <div className={styles.header}>
         <div className={styles.shopCartContainer}>
-          <img
-            className={styles.shopCart}
-            src={shoppingCart}
-            alt="Shoping cart"
-          />
+          <Link to={"cart"} style={{ display: "contents" }}>
+            <img
+              className={styles.shopCart}
+              src={shoppingCart}
+              alt="Shoping cart"
+            />
+          </Link>
         </div>
         <div style={{ position: "relative" }}>
           <button className={styles.btn} onClick={() => setClick((e) => !e)}>

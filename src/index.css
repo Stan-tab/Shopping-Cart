@@ -29,6 +29,23 @@ body {
   }
 }
 
+@media (max-width: 350px) {
+  nav {
+    transition: all 1s ease-in-out;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--backgroundColor);
+    height: 150vh;
+    left: -100%;
+  }
+  .show {
+    transform: translate(225%, 10%);
+  }
+  nav + div {
+    width: 100vw;
+  }
+}
+
 #root {
   /* max-width: 1280px; */
   padding: 1.5rem;
