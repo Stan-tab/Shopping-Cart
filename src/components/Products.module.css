@@ -10,6 +10,11 @@
   padding: 15px;
   p {
     margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -41,4 +46,26 @@
 
 .img-container {
   position: relative;
+}
+
+.prod-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    border: 1px solid grey;
+    vertical-align: middle;
+    height: 10rem;
+    flex-direction: column;
+    >* {
+      margin: 0.5rem;
+    }
 }
